@@ -2,7 +2,7 @@ const input = [100,101,105,106,103,104,106,108,112,123,125,149,158,147,150,153,1
 
 execute1 = (input) => {
   return input.reduce((acc, elem, index) =>{
-			return index == 0 ? acc : Number(input[index-1] < elem) + acc;
+    return index == 0 ? acc : Number(input[index-1] < elem) + acc;
   }, 0);
 }
 
