@@ -78,11 +78,9 @@ arrayofMaxDimensions = (lines) => {
 
 execute = (lines, excludeDiagonal) =>{
 	let parsedLines = parse(lines, excludeDiagonal);
-  //first pregenerate result array
   let result = parsedLines.reduce((acc, elem) => {
   	return setLineBetween(acc, elem);
   }, arrayofMaxDimensions(parsedLines));
-  //console.table(result);
   console.log(result.flat().filter(x => x>1).length);
 }
 
